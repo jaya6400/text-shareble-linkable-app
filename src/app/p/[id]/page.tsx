@@ -4,21 +4,24 @@ import { notFound } from "next/navigation";
 export default async function PastePage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
+  const { id } = await params;
+
   const paste = await prisma.paste.findUnique({
-    where: { id: params.id },
+    where: { id },
   });
 
   if (!paste) notFound();
 
   if (paste.expiresAt && paste.expiresAt < new Date()) notFound();
 
-  if (paste.maxViews !== null && paste.viewCount >= paste.maxViews)
+  if (paste.maxViews !== null && paste.viewCount >= paste.maxViews) {
     notFound();
+  }
 
   await prisma.paste.update({
-    where: { id: paste.id },
+    where: { id },
     data: { viewCount: { increment: 1 } },
   });
 
