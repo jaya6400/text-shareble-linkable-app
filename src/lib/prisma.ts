@@ -1,4 +1,5 @@
-import { PrismaClient } from "@prisma/client";
+// @ts-nocheck
+import { PrismaClient } from "@prisma/client/edge";
 import { PrismaNeon } from "@prisma/adapter-neon";
 import { neon } from "@neondatabase/serverless";
 

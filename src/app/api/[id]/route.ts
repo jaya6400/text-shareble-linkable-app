@@ -4,10 +4,12 @@ import { NextResponse } from "next/server";
 
 export async function GET(
   req: Request,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await context.params;
+
   const paste = await prisma.paste.findUnique({
-    where: { id: params.id },
+    where: { id },
   });
 
   if (!paste) {
@@ -25,7 +27,7 @@ export async function GET(
   }
 
   const updated = await prisma.paste.update({
-    where: { id: paste.id },
+    where: { id },
     data: { viewCount: { increment: 1 } },
   });
 
