@@ -6,7 +6,9 @@
     "dev": "next dev --webpack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "prisma:push": "prisma db push --config prisma-cli/prisma.config.ts",
+    "prisma:studio": "prisma studio --config prisma-cli/prisma.config.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.0.2",
