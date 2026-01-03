@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "vercel-build": "prisma generate && next build",
     "prisma:push": "prisma db push --config prisma-cli/prisma.config.ts",
     "prisma:studio": "prisma studio --config prisma-cli/prisma.config.ts"
   },
