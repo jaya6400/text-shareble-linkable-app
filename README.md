@@ -1,7 +1,7 @@
 # Text Sharable Linkable App
 
-🔗 **Live Demo:** https://your-app-name.vercel.app  
-🧪 **Health Check:** https://your-app-name.vercel.app/api/healthz
+🔗 **Live Demo:** https://text-shareble-linkable-app-jd.vercel.app/ 
+🧪 **Health Check:** https://text-shareble-linkable-app-jd.vercel.app/api/healthz
 
 A lightweight Text Sharable Linkable web application that allows users to create text pastes, generate shareable links, and view pastes with optional expiration constraints.
 
