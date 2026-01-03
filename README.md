@@ -22,10 +22,10 @@ Kept automated testing compatibility in mind.
 ---
 
 ## Unit Tests
-![Create Paste](./screenshots/post.png)
-![View Paste](./screenshots/get.png)
-![View TTL Response](./screenshots/get-ttl.png)
-![UI](./screenshots/Ui.png)
+![Create Paste](./screenshots/post.PNG)
+![View Paste](./screenshots/get.PNG)
+![View TTL Response](./screenshots/get-ttl.PNG)
+![UI](./screenshots/Ui.PNG)
 
 ## Tech Stack
 
