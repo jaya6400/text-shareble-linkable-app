@@ -1,6 +1,6 @@
 # Text Sharable Linkable App
 
-A lightweight Pastebin-like web application that allows users to create text pastes, generate shareable links, and view pastes with optional expiration constraints.
+A lightweight Text Sharable Linkable web application that allows users to create text pastes, generate shareable links, and view pastes with optional expiration constraints.
 
 Built as a take-home assignment with automated testing compatibility in mind.
 
@@ -23,7 +23,7 @@ Built as a take-home assignment with automated testing compatibility in mind.
 - **Framework:** Next.js 16 (App Router)
 - **Language:** TypeScript
 - **Database:** PostgreSQL (Neon)
-- **ORM:** Prisma 7
+- **ORM:** Prisma
 - **Deployment:** Vercel
 
 ---
