@@ -1,8 +1,11 @@
 # Text Sharable Linkable App
 
+🔗 **Live Demo:** https://your-app-name.vercel.app  
+🧪 **Health Check:** https://your-app-name.vercel.app/api/healthz
+
 A lightweight Text Sharable Linkable web application that allows users to create text pastes, generate shareable links, and view pastes with optional expiration constraints.
 
-Built as a take-home assignment with automated testing compatibility in mind.
+Kept automated testing compatibility in mind.
 
 ---
 
@@ -17,6 +20,12 @@ Built as a take-home assignment with automated testing compatibility in mind.
 - 🧪 Deterministic expiry testing support
 
 ---
+
+## Unit Tests
+![Create Paste](./screenshots/post.png)
+![View Paste](./screenshots/get.png)
+![View TTL Response](./screenshots/get-ttl.png)
+![UI](./screenshots/Ui.png)
 
 ## Tech Stack
 
@@ -62,7 +71,7 @@ model Paste {
 
 1. **Clone the repository**
 ```bash
-   git clone 
+   git clone https://github.com/jaya6400/text-shareble-linkable-app.git
    cd text-shareble-linkable-app
 ```
 
@@ -156,7 +165,7 @@ Content-Type: application/json
 ```json
 {
   "id": "abc123xyz",
-  "url": "http://localhost:3000/p/abc123xyz"
+  "url": "/p/abc123xyz"
 }
 ```
 
@@ -172,12 +181,9 @@ GET /api/pastes/:id
 **Response:**
 ```json
 {
-  "id": "abc123xyz",
   "content": "Your text content here",
-  "createdAt": "2025-01-03T10:30:00.000Z",
-  "expiresAt": "2025-01-03T11:30:00.000Z",
-  "viewCount": 5,
-  "maxViews": 10
+  "expires_at": "2025-01-03T11:30:00.000Z",
+  "remaining_views": 5,
 }
 ```
 
